@@ -14,9 +14,15 @@
 ProdLogProg is an Android application for production logging. It is a public repository created by the user antzsmt.
 
 Main Function Points
-Production log application for Android
-Allows users to record and manage production-related information
+
+-Production log application for Android
+
+-Allows users to record and manage production-related information
+
 Technology Stack
-C#
+
+-C#
+
 License
-The project does not specify a license, so the default copyright applies.
+
+-The project does not specify a license, so the default copyright applies.
