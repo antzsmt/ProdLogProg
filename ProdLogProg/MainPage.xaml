@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProdLogProg.MainPage">
+    <StackLayout Padding="20">
+        <!-- App Header -->
+        <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
+            <!-- Small picture graphic -->
+            <Image Source="icon_main.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" VerticalOptions="Center" />
+
+            <!-- Heading label -->
+            <Label Text="Production Log" FontSize="24" TextColor="OrangeRed" VerticalOptions="Center" FontAttributes="Bold" />
+        </StackLayout>
+
+        <!-- Product Selection -->
+        <Entry x:Name="txtProduct" Placeholder="Enter Product Name" />
+
+        <!-- User Input Fields -->
+        <Entry x:Name="txtTime" Placeholder="Time per Unit (seconds)" Keyboard="Numeric" />
+        <Entry x:Name="txtQuantity" Placeholder="Panel Quantity" Keyboard="Numeric" />
+        <Entry x:Name="txtMONumber" Placeholder="MO Number" Keyboard="Numeric"/>
+        <Editor x:Name="txtComments" Placeholder="Comments" HeightRequest="150" VerticalOptions="FillAndExpand"/>
+
+        <!-- Action Buttons -->
+        <Button Text="Calculate" Clicked="BtnCalculate_Clicked" />
+        <Button Text="Add Data" Clicked="BtnAddData_Clicked" />
+        <Button Text="Clear" Clicked="BtnClear_Clicked" />
+        <Button Text="Save to Excel" Clicked="BtnSaveToExcel_Clicked" />
+        <Button Text="Import Data" Clicked="BtnImportData_Clicked" />
+
+        <!-- Exit Button -->
+        <Button Text="Exit" Clicked="BtnExit_Clicked" />
+
+        <!-- Result Display -->
+        <Label x:Name="lblResult" FontSize="18" TextColor="DarkGoldenrod" />
+    </StackLayout>
+</ContentPage>
+
+
