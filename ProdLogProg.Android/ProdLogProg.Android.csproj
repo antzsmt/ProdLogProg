@@ -98,7 +98,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\drawable\icon_main.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon_main.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon_main.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon_main.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
