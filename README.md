@@ -24,7 +24,7 @@ ProdLogProg is an innovative and easy-to-use Android application designed for pr
 
 ## 🖼️ **Screenshot**
 
-![ProdLogProg Screenshot](relative/path/to/your/screenshot.png)
+![ProdLogProg Screenshot](screenshot.png)
 
 *Example of the ProdLogProg interface.*
 
