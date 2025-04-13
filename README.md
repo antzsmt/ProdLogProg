@@ -28,6 +28,8 @@ ProdLogProg is an innovative and easy-to-use Android application designed for pr
    ```bash
    git clone https://github.com/antzsmt/ProdLogProg.git
 
+---
+
    ## **Screenshot**
 
    ![Screenshot](screenshot.png)
