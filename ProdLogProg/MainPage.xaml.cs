@@ -46,7 +46,6 @@ namespace ProdLogProg
                 // Provide feedback to the user
                 DisplayAlert("Success", "Data added successfully.", "OK");
 
-                // Clear the input fields for the next entry
                 txtProduct.Text = string.Empty;
                 txtTime.Text = string.Empty;
                 txtQuantity.Text = string.Empty;
