@@ -21,8 +21,6 @@ Main Function Points
 
 -Allows users to record and manage production-related information
 
-Technology Stack
-
 -C#
 
 License
