@@ -30,7 +30,6 @@ namespace ProdLogProg
         {
             try
             {
-                // Collect data from the input fields
                 var data = new ProductionData
                 {
                     Product = txtProduct.Text,
