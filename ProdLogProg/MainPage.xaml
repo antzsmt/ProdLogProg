@@ -4,13 +4,14 @@
              x:Class="ProdLogProg.MainPage">
     <StackLayout Padding="20">
         <!-- App Header -->
-        <StackLayout Orientation="Horizontal" Padding="10" Spacing="10">
-            <!-- Small picture graphic -->
-            <Image Source="icon_main.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" VerticalOptions="Center" />
+        <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" VerticalOptions="Center">
+            <!-- Graphic/Icon -->
+            <Image Source="icon_main.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
 
-            <!-- Heading label -->
+            <!-- Title -->
             <Label Text="Production Log" FontSize="24" TextColor="OrangeRed" VerticalOptions="Center" FontAttributes="Bold" />
         </StackLayout>
+
 
         <!-- Product Selection -->
         <Entry x:Name="txtProduct" Placeholder="Enter Product Name" />
