@@ -30,8 +30,33 @@ ProdLogProg is an innovative and easy-to-use Android application designed for pr
 
 ---
 
+## 🔧 **Requirements**
+
+To use or build this project, ensure you have the following:
+- **Android Version**: Android 8.0 (Oreo) or higher is recommended.
+- **IDE**: Visual Studio with Xamarin, or Android Studio.
+- **Dependencies**: Check the project for any required libraries or frameworks.
+
+---
+
 ## 🛠 **Getting Started**
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/antzsmt/ProdLogProg.git
+
+2. Build the Project: Open the project in your preferred IDE and build it (e.g., in Visual Studio or Android Studio).
+
+3. Deploy: Install the app on your Android device and start logging!
+
+## 💡 **Key Benefits**
+- Efficient Workflow Management: Reduce downtime and errors in logging production.
+
+- Customizable Logging Fields: Tailor data fields to meet unique production needs.
+
+## ✨ **Credits**
+Special thanks to:
+
+- ѦηƬẑ: Creator and maintainer of the project.
+
+- Any open-source libraries or frameworks used in the development.
