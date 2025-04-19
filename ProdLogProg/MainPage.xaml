@@ -38,7 +38,7 @@
                        <Label Text="Result" Grid.Row="0" Grid.Column="5" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
 
                         <!-- Example Data Row -->
-                        <Label Text="Test Name" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
+                       <Label Text="Test Name" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
                        <Label Text="50" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
                        <Label Text="25" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
                        <Label Text="123456" Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
