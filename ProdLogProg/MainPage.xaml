@@ -1,40 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProdLogProg.MainPage">
-    <StackLayout Padding="20">
-        <!-- App Header -->
-        <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" VerticalOptions="Center">
-            <!-- Graphic/Icon -->
-            <Image Source="icon_main.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            x:Class="ProdLogProg.MainPage">  
+   <!-- Wrap everything inside a ScrollView to handle screen rotation and scrolling -->  
+   <ScrollView>  
+       <StackLayout Padding="20">  
+           <!-- App Header -->  
+           <StackLayout Orientation="Horizontal" Padding="10" Spacing="10" VerticalOptions="Center">  
+               <Image Source="icon_main.png" WidthRequest="24" HeightRequest="24" VerticalOptions="Center" />  
+               <Label Text="Production Log" FontSize="24" TextColor="OrangeRed" VerticalOptions="Center" FontAttributes="Bold" />  
+           </StackLayout>  
 
-            <!-- Title -->
-            <Label Text="Production Log" FontSize="24" TextColor="OrangeRed" VerticalOptions="Center" FontAttributes="Bold" />
-        </StackLayout>
+           <!-- Data Grid Section -->  
+           <Frame BorderColor="LightGray" CornerRadius="5" Padding="5" Margin="0,5,0,5">  
+               <ScrollView Orientation="Horizontal">  
+                   <!-- Enable horizontal scrolling -->  
+                   <Grid x:Name="DataGrid" Padding="5">  
+                       <Grid.RowDefinitions>  
+                           <RowDefinition Height="Auto" />  
+                           <!-- Header row -->  
+                       </Grid.RowDefinitions>  
+                       <Grid.ColumnDefinitions>  
+                           <ColumnDefinition Width="0.5*" />  
+                           <ColumnDefinition Width="0.5*" />  
+                           <ColumnDefinition Width="0.5*" />  
+                           <ColumnDefinition Width="0.5*" />  
+                           <ColumnDefinition Width="0.5*" />  
+                           <ColumnDefinition Width="0.5*" />  
+                       </Grid.ColumnDefinitions>  
 
+                       <!-- Header Labels -->  
+                       <Label Text="Product Name" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
+                       <Label Text="Cycle Time" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
+                       <Label Text="Panel Quantity" Grid.Row="0" Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
+                       <Label Text="MO Number" Grid.Row="0" Grid.Column="3" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />  
+                       <Label Text="Comments" Grid.Row="0" Grid.Column="4" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
+                       <Label Text="Result" Grid.Row="0" Grid.Column="5" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />  
 
-        <!-- Product Selection -->
-        <Entry x:Name="txtProduct" Placeholder="Enter Product Name" />
+                       <!-- Example Data Row   
+                       <Label Text="Test Name" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
+                       <Label Text="50" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
+                       <Label Text="25" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
+                       <Label Text="123456" Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
+                       <Label Text="Sample Info" Grid.Row="1" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
+                       <Label Text="Run Time: 0 hours 50 mins" Grid.Row="1" Grid.Column="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  -->
+                   </Grid>  
+               </ScrollView>  
+           </Frame>  
 
-        <!-- User Input Fields -->
-        <Entry x:Name="txtTime" Placeholder="Time per Unit (seconds)" Keyboard="Numeric" />
-        <Entry x:Name="txtQuantity" Placeholder="Panel Quantity" Keyboard="Numeric" />
-        <Entry x:Name="txtMONumber" Placeholder="MO Number" Keyboard="Numeric"/>
-        <Editor x:Name="txtComments" Placeholder="Comments" HeightRequest="150" VerticalOptions="FillAndExpand"/>
+           <!-- Product Selection and User Input Fields -->  
+           <Entry x:Name="txtProduct" Placeholder="Name" />  
+           <Entry x:Name="txtTime" Placeholder="Time per Unit" Keyboard="Numeric" />  
+           <Entry x:Name="txtQuantity" Placeholder="Quantity" Keyboard="Numeric" />  
+           <Entry x:Name="txtMONumber" Placeholder="MO Number" Keyboard="Numeric" />  
+           <Editor x:Name="txtComments" Placeholder="Comments" HeightRequest="50" VerticalOptions="FillAndExpand"/>
+           <Label x:Name="lblResult" FontSize="18" TextColor="DarkGoldenrod" />
 
-        <!-- Action Buttons -->
-        <Button Text="Calculate" Clicked="BtnCalculate_Clicked" />
-        <Button Text="Add Data" Clicked="BtnAddData_Clicked" />
-        <Button Text="Clear" Clicked="BtnClear_Clicked" />
-        <Button Text="Save to Excel" Clicked="BtnSaveToExcel_Clicked" />
-        <Button Text="Import Data" Clicked="BtnImportData_Clicked" />
-
-        <!-- Exit Button -->
-        <Button Text="Exit" Clicked="BtnExit_Clicked" />
-
-        <!-- Result Display -->
-        <Label x:Name="lblResult" FontSize="18" TextColor="DarkGoldenrod" />
-    </StackLayout>
+           <!-- Action Buttons -->
+            <Button x:Name="btnCalculate" Text="Calculate" Clicked="BtnCalculate_Clicked" />
+            <Button x:Name="btnAddData" Text="Add Data" Clicked="BtnAddData_Clicked" />
+            <Button x:Name="btnRemoveData" Text="Remove Data" Clicked="BtnRemoveData_Clicked" />
+            <Button x:Name="btnClear" Text="Clear" Clicked="BtnClear_Clicked" />
+            <Button x:Name="btnSaveToExcel" Text="Save to Excel" Clicked="BtnSaveToExcel_Clicked" />
+            <Button x:Name="btnImportData" Text="Import Data" Clicked="BtnImportData_Clicked" />
+            <Button x:Name="btnExit" Text="Exit" Clicked="BtnExit_Clicked" />
+        </StackLayout>  
+   </ScrollView>  
 </ContentPage>
-
-
