@@ -21,12 +21,12 @@
                            <!-- Header row -->  
                        </Grid.RowDefinitions>  
                        <Grid.ColumnDefinitions>  
-                           <ColumnDefinition Width="0.5*" />  
-                           <ColumnDefinition Width="0.5*" />  
-                           <ColumnDefinition Width="0.5*" />  
-                           <ColumnDefinition Width="0.5*" />  
-                           <ColumnDefinition Width="0.5*" />  
-                           <ColumnDefinition Width="0.5*" />  
+                           <ColumnDefinition Width="0.8*" />  
+                           <ColumnDefinition Width="0.8*" />  
+                           <ColumnDefinition Width="0.8*" />  
+                           <ColumnDefinition Width="0.8*" />  
+                           <ColumnDefinition Width="0.8*" />  
+                           <ColumnDefinition Width="0.8*" />  
                        </Grid.ColumnDefinitions>  
 
                        <!-- Header Labels -->  
@@ -35,15 +35,15 @@
                        <Label Text="Panel Quantity" Grid.Row="0" Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
                        <Label Text="MO Number" Grid.Row="0" Grid.Column="3" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />  
                        <Label Text="Comments" Grid.Row="0" Grid.Column="4" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
-                       <Label Text="Result" Grid.Row="0" Grid.Column="5" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />  
+                       <Label Text="Result" Grid.Row="0" Grid.Column="5" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="14" />
 
-                       <!-- Example Data Row   
-                       <Label Text="Test Name" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
+                        <!-- Example Data Row -->
+                        <Label Text="Test Name" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
                        <Label Text="50" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
                        <Label Text="25" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
                        <Label Text="123456" Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
                        <Label Text="Sample Info" Grid.Row="1" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  
-                       <Label Text="Run Time: 0 hours 50 mins" Grid.Row="1" Grid.Column="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />  -->
+                       <Label Text="Run Time: 0 hours 50 mins" Grid.Row="1" Grid.Column="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontSize="12" />
                    </Grid>  
                </ScrollView>  
            </Frame>  
