@@ -301,6 +301,24 @@ namespace ProdLogProg
                     fileName += ".xlsx";
                 }
 
+                // Check if the file already exists
+                string filePath = DependencyService.Get<IFileService>().GetSavedFilePath(fileName);
+                if (File.Exists(filePath))
+                {
+                    bool overwrite = await DisplayAlert(
+                        "File Exists",
+                        $"The file '{fileName}' already exists. Do you want to overwrite it?",
+                        "Overwrite",
+                        "Cancel"
+                    );
+
+                    if (!overwrite)
+                    {
+                        await DisplayAlert("Cancelled", "File not overwritten.", "OK");
+                        return;
+                    }
+                }
+
                 // Create the Excel file in memory
                 using (var stream = new MemoryStream())
                 using (var workbook = new ClosedXML.Excel.XLWorkbook())
@@ -329,11 +347,10 @@ namespace ProdLogProg
                     // Save the workbook to the memory stream
                     workbook.SaveAs(stream);
 
-                    // Call the Android-specific code to save the file
+                    // Save the file
                     DependencyService.Get<IFileService>().SaveFile(fileName, stream.ToArray());
 
-                    // Save the file path to persistent storage
-                    string filePath = DependencyService.Get<IFileService>().GetSavedFilePath(fileName);
+                    // Update the saved file path in persistent storage
                     Application.Current.Properties["LastExcelFilePath"] = filePath;
                     await Application.Current.SavePropertiesAsync();
                 }
